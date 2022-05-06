@@ -18,6 +18,11 @@
         <ResourceDictionary>
             <conv:NullToBoolean x:Key="NullToBool" />
             <conv:ResourceToString x:Key="StrToRes" />
+
+            <CollectionViewSource
+                x:Key="cvs"
+                x:Name="cvs"
+                IsSourceGrouped="True" />
         </ResourceDictionary>
     </Page.Resources>
 
@@ -182,15 +187,16 @@
                 </AppBarButton.Flyout>
             </AppBarButton>
 
-            <AppBarSeparator />
-
-            <AppBarButton
-                x:Name="AddFolders"
-                x:Uid="/MediaLibrary/AddFolders"
-                HorizontalAlignment="Right"
-                Click="AddFolders_Click"
-                Icon="NewFolder" />
-
+            <AppBarButton Icon="Sort" Label="Group by">
+                <AppBarButton.Flyout>
+                    <MenuFlyout>
+                        <muxc:RadioMenuFlyoutItem Tag="AtoZ" Click="GroupFlyoutItem_Click" Text="A-Z" IsChecked="True" />
+                        <muxc:RadioMenuFlyoutItem Tag="Artist" Click="GroupFlyoutItem_Click" Text="Artist" />
+                        <muxc:RadioMenuFlyoutItem Tag="Album" Click="GroupFlyoutItem_Click" Text="Album" />
+                        <muxc:RadioMenuFlyoutItem Tag="ReleaseYear" Click="GroupFlyoutItem_Click" Text="Release year" />
+                    </MenuFlyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
 
         </CommandBar>
 
@@ -203,7 +209,6 @@
             animations:Connected.ListItemKey="AlbumArt"
             DoubleTapped="MainList_DoubleTapped"
             IsDoubleTapEnabled="True"
-            ItemsSource="{x:Bind Songs}"
             RightTapped="MainList_RightTapped"
             SelectedItem="{x:Bind SelectedSong, Mode=TwoWay}"
             SelectionMode="Single">
@@ -286,6 +291,16 @@
                     </MenuFlyoutItem>
                 </MenuFlyout>
             </ListView.Resources>
+
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="{Binding Key}" />
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListView.GroupStyle>
 
             <ListView.ItemContainerStyle>
                 <Style BasedOn="{StaticResource DefaultListViewItemStyle}" TargetType="ListViewItem">

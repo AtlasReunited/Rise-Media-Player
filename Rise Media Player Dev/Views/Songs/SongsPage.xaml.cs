@@ -1,9 +1,11 @@
-﻿using Microsoft.Toolkit.Uwp.UI;
+﻿using Microsoft.Toolkit.Collections;
+using Microsoft.Toolkit.Uwp.UI;
 using Rise.App.Dialogs;
 using Rise.App.ViewModels;
 using Rise.Common.Helpers;
 using System;
 using System.Diagnostics;
+using System.Linq;
 using Windows.Storage;
 using Windows.System;
 using Windows.UI.Xaml;
@@ -55,11 +57,12 @@ namespace Rise.App.Views
             Loaded += SongsPage_Loaded;
             _navigationHelper = new NavigationHelper(this);
             _navigationHelper.LoadState += NavigationHelper_LoadState;
-            //ApplySettings();
         }
 
         private void SongsPage_Loaded(object sender, RoutedEventArgs e)
         {
+            GroupItems();
+
             AddTo.Items.Clear();
 
             MenuFlyoutItem newPlaylistItem = new()
@@ -322,6 +325,28 @@ namespace Rise.App.Views
                     dialog.Hide();
                 }
             }
+        }
+
+        private void GroupFlyoutItem_Click(object sender, RoutedEventArgs e)
+        {
+            GroupItems((sender as FrameworkElement).Tag as string);
+        }
+
+        private void GroupItems(string sort = "AtoZ")
+        {
+            var grouped = App.MViewModel.Songs.GroupBy(s => sort switch
+            {
+                "Artist" => s.Artist,
+                "Album" => s.Album,
+                "ReleaseYear" => s.Year.ToString(),
+                _ => s.Title.First().ToString().ToUpper(),
+            }).OrderBy(g => g.Key);
+
+            var source = new ObservableGroupedCollection<string, SongViewModel>(grouped);
+
+            cvs.Source = source;
+
+            MainList.ItemsSource = cvs.View;
         }
     }
 }

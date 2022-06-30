@@ -12,12 +12,12 @@
 ### **Download the installer from the download link below or clone the repository to build :) Alpha Preview 2 is out now!**!
 
 
-**Rise Media Player** brings all of your media to a whole new level. If it's videos, the music stored on your devices, discs or even your favourite streaming services; you'll love our player. One library for everything. Almost infinite customisability with settings that are second to none. Stream, browse and explore with Streaming Services - coming soon.
+**Rise Media Player** brings all of your media to a whole new level. Whether it's videos, the music stored on your devices, discs or even your favourite streaming services, you'll love our player! Nearly endless user customization, with options that are second to none. Stream, browse and explore with Streaming Services - coming soon.
 
 [Contribute to this Project](https://github.com/Rise-Software/Rise-Media-Player)
 ## Appearance & design
 
-Created with **WinUI and the latest design ideologies**, **Rise Media Player** is modern while keeping all of the classic features people need. We use **WinUI 2.8 Preview** to keep our user interface, clean, modern and consistent with **Windows 11 UI and UX**. Although, this app does work on **Windows 10** too. We use all of your favourite materials: Mica and Acrylic. We use Microsoft's icons and controls as well as some of our own to create a generally native feeling experience. Our own controls and icons give users a truly personalised experience, being able to choose their own icon packs and with features like compact mode, you can use it on any *Windows device!* **(go to bottom for more details)**
+Created using **WinUI and the latest design ideologies**, **Rise Media Player** is modern, while keeping all of the classic features people need. **WinUI 2.8 Preview** is used to keep our user interface, clean, modern and consistent. We use all of your favourite materials: Mica and Acrylic. We use Microsoft's icons and controls as well as some of our own to create a generally native feeling experience. Our own controls and icons give users a truly personalised experience, being able to choose their own icon packs and with features like compact mode, you can use it on any *Windows device!* **(go to bottom for more details)**
 
 ![Alpha Preview 2 Screenshot](https://user-images.githubusercontent.com/74561130/156649276-8dc63e37-bf76-4321-ae7a-4e77f2022c37.png)
 
@@ -42,7 +42,7 @@ Created with **WinUI and the latest design ideologies**, **Rise Media Player** i
 * Colourful icons setting for more Windows 11 esque experience
 * Casting to devices, repeat, shuffle
 * Insider exclusives
-* Pick up where you left off support
+* Pick up where you left off
 
 **Insider Exclusives**
 
@@ -66,9 +66,9 @@ We use the GPL License V3 - View our License (aka Terms and Conditions) below.
 
 MSIX packages are available now for the Alpha Preview 2 build.
 
-Currently, all users can try out the MSIX packages. When we move to the store, you must be signed up to the insider program to be able to install. You can do this from the button below.
+Currently, all users can use the MSIX packages. When we move to the store, you must signe up for the insider program for installation. You can do this from the button below.
 
-**If you are an Insider already, just click the Download button and you'll be taken to a page to download :)**
+**If you are an Insider already, click the Download button and you'll be taken to a page to download :)**
 
 [![Download](https://user-images.githubusercontent.com/74561130/137598555-649c77c7-1719-4aa3-8017-8b41283de730.png)](https://github.com/Rise-Software/Rise-Media-Player/releases)    ![divide](https://user-images.githubusercontent.com/74561130/137599566-866fef7d-967e-4ad1-91da-8014d1752b93.png)    [![Contribute](https://user-images.githubusercontent.com/74561130/137586097-1f64560c-9bb1-47cc-bd44-fa87c1b09e5b.png)](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAc11dY1UQ1pJWFRWOFA1MDk3MUtVRk5SWVlTQktPWS4u)    [![JoinInsider](https://user-images.githubusercontent.com/74561130/137585885-7f98b4de-5067-41ee-bdb4-2a04fea4b90a.png)](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAc11dY1UMUdKWlVSTE0yN0JKMEpXWkc5T1ZBMkpUWC4u)    
 ## Credits
